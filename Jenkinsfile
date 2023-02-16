@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cat working.cpp'
+                sh 'ca working.cpp'
             }
         }
         stage('Deploy') {
             steps {
-                //echo "Deployment Successful"
+                echo "Deployment Successful"
             }
         }
     }
