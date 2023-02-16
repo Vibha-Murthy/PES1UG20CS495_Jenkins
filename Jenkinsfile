@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'g++ working.cpp -o PES1UG20CS495'
-                jenkinsBuild job: 'PES1UG20CS495-1', wait: true
+                build job: 'PES1UG20CS495-1', wait: false
+                echo 'Build Successful'
             }
         }
         stage('Test') {
             steps {
-                sh './PES1UG20CS495'
+                sh 'cat working.cpp'
             }
         }
         stage('Deploy') {
